@@ -1,5 +1,8 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import Movies from './components/Movies';
+import Admin from './components/Admin';
+import Home from './components/Home';
 
 export default function App() {
   return (
@@ -28,9 +31,9 @@ export default function App() {
           </div>
           <div className='col-md-10'>
             <Routes>
-              <Route path='/movies' element={Movies}/>
-              <Route path='/admin' element={Admin}/>
-              <Route path='/' element={Home}/>
+              <Route path="/movies" element={<Movies />} />
+              <Route path="/admin" element={<Admin />} />
+              <Route path="/" element={<Home />} />
             </Routes>
           </div>
         </div>
@@ -38,16 +41,3 @@ export default function App() {
     </Router>
   );  
 }
-
-function Home() {
-  return <p>a</p>
-}
-
-function Admin() {
-  return <h2>Admin</h2>
-}
-
-function Movies() {
-  return <h2>Movies</h2>
-}
-
