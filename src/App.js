@@ -1,8 +1,10 @@
 import React, { Fragment } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useParams} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useParams, useMatch} from 'react-router-dom';
 import Movies from './components/Movies';
 import Admin from './components/Admin';
 import Home from './components/Home';
+import Categories from './components/Categories';
+import Category from './components/Category';
 
 export default function App() {
   return (
@@ -24,6 +26,9 @@ export default function App() {
                   <Link to="/movies">Movies</Link>
                 </li>
                 <li className='list-group-item'>
+                  <Link to="/categories">Categories</Link>
+                </li>
+                <li className='list-group-item'>
                   <Link to="/admin">Manage Catalogue</Link>
                 </li>
               </ul>
@@ -34,6 +39,15 @@ export default function App() {
             <Route path="/" element={<Home />} />
               <Route path="/movies" element={<Movies />} />
               <Route path="/movies/:id" element={<Movie />} />
+              <Route path="/categories" element={<Categories />} />
+              <Route
+                path="/categories/drama"  
+                element={<Category Message="Category: Drama" />}
+              />
+              <Route
+                path="/categories/comedy"  
+                element={<Category Message="Category: Comedy" />}
+              />
               <Route path="/admin" element={<Admin />} />
             </Routes>
           </div>
