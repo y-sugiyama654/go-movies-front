@@ -5,6 +5,7 @@ import Admin from './components/Admin';
 import Home from './components/Home';
 import Categories from './components/Categories';
 import Category from './components/Category';
+import Movie from './components/Movie';
 
 export default function App() {
   return (
@@ -55,9 +56,4 @@ export default function App() {
       </div>
     </Router>
   );  
-}
-
-function Movie() {
-  let { id } = useParams();
-  return <h2>The id is {id}</h2>
 }
