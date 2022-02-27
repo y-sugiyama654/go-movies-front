@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Category from './components/Category';
 import Movie from './components/Movie';
 import Genres from './components/Genres';
+import Genre from './components/Genre';
 
 export default function App() {
   return (
@@ -40,6 +41,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
               <Route path="/movies" element={<Movies />} />
               <Route path="/movie/:id" element={<Movie />} />
+              <Route path="/genre/:id" element={<Genre />} />
               <Route path="/genres" element={<Genres />} />
               <Route path="/admin" element={<Admin />} />
             </Routes>
