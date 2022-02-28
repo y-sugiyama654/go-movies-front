@@ -53,13 +53,15 @@ class Genre extends Component {
                     <h2>Genre:</h2>
 
                     <div className="list-group">
-                        <ul>
-                            {movies.map((m)=>(
-                                <li key={m.id}>
-                                    <Link to={`/movie/${m.id}`} className="list-group-item list-group-item-action" >{m.title}</Link>
-                                </li>
-                            ))}
-                        </ul>
+                        {movies.map((m)=>(
+                            <Link 
+                                key={m.id}
+                                to={`/movie/${m.id}`}
+                                className="list-group-item list-group-item-action"
+                            >
+                                {m.title}
+                            </Link>
+                        ))}
                     </div>     
                 </Fragment>
             );
