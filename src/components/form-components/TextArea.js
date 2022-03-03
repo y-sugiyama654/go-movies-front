@@ -10,7 +10,7 @@ const TextArea = (props) => {
                 name={props.name}
                 rows={props.roes}
                 onChange={props.handleChange} 
-                value={props.description}
+                value={props.value}
             />
                 
         </div>  
