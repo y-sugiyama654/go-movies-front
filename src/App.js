@@ -7,6 +7,8 @@ import Category from './components/Category';
 import Movie from './components/Movie';
 import Genres from './components/Genres';
 import Genre from './components/Genre';
+import EditMovie from './components/EditMovie';
+// import EditMovie from './components/EditMovie';
 
 export default function App() {
   return (
@@ -31,6 +33,9 @@ export default function App() {
                   <Link to="/genres">Genres</Link>
                 </li>
                 <li className='list-group-item'>
+                  <Link to="/admin/add">Add Movie</Link>
+                </li>
+                <li className='list-group-item'>
                   <Link to="/admin">Manage Catalogue</Link>
                 </li>
               </ul>
@@ -42,6 +47,7 @@ export default function App() {
               <Route path="/movies" element={<Movies />} />
               <Route path="/movie/:id" element={<Movie />} />
               <Route path="/genre/:id" element={<Genre />} />
+              <Route path="/admin/add" element={<EditMovie />} />
               <Route path="/genres" element={<Genres />} />
               <Route path="/admin" element={<Admin />} />
             </Routes>
